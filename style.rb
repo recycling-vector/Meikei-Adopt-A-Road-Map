@@ -31,7 +31,7 @@ style['layers'].push({
   'source-layer' => DATA_LAYER,
   :layout => {
     'text-allow-overlap' => true,
-    'text-field' => '♻',
+    'text-field' => '○',
     'text-size' => [
       'interpolate',
       ['exponential', 2],
