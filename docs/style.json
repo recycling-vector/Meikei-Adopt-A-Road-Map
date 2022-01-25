@@ -99547,7 +99547,7 @@
       "source-layer": "places",
       "layout": {
         "text-allow-overlap": true,
-        "text-field": "♻",
+        "text-field": "○",
         "text-size": [
           "interpolate",
           [
