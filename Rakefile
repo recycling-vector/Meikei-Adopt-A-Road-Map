@@ -25,7 +25,7 @@ end
 desc 'CSV ファイルからベクトルタイルを作る'
 task :tiles do
   sh <<-EOS
-curl #{DATA_URL} | \
+cat #{DATA_URL} | \
 ruby togeojsons.rb | \
 tippecanoe -f --output-to-directory=docs/zxy \
 --no-tile-compression

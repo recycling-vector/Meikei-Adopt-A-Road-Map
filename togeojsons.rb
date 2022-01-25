@@ -9,7 +9,7 @@ while gets
     fields = r 
     first = false
   else
-    raise $_ unless r.size == DATA_N_FIELDS
+    #raise $_ unless r.size == DATA_N_FIELDS
     f = {
       :type => 'Feature',
       :geometry => {
@@ -27,7 +27,7 @@ while gets
       }
     }
     DATA_N_FIELDS.times {|i|
-      f[:properties][fields[i]] = r[i]
+      f[:properties][fields[i]] = r[i] if r[i]
     }
     print "\x1e#{JSON.dump(f)}\n"
   end
