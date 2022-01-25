@@ -51,8 +51,7 @@ const showMap = async () => {
       const props = e.features[0].properties
       let u = new SpeechSynthesisUtterance()
       u.lang = 'ja-JP'
-      u.text = props['店名'] + '。' +
-        props['住所'] + '。' +
+      u.text = props['場所'] + '。' +
         Object.keys(props).filter(
           k => props[k] == 't'
         ).join('、')
@@ -73,7 +72,7 @@ const showMap = async () => {
         k => props[k] == 't'
       )
       const html = 
-        `<h3>${props.店名}</h3>${props.住所}` +
+        `<h3>${props.場所}</h3>` +
         (
 	  collectedItems.length != 0 ?
 	  '<ul>' + 

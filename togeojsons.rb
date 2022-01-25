@@ -15,7 +15,7 @@ while gets
       :geometry => {
         :type => 'Point',
         :coordinates => [
-          r[4].to_f, r[3].to_f
+          r[2].to_f, r[1].to_f
         ]
       },
       :properties => {
